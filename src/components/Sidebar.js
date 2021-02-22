@@ -2,7 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../resources/CSS/Sidebar.css';
 
-import SidebarItem from './SidebarItem.js';
+import Contents from './Contents.js'
+import SidebarItem from '../pages/SidebarItem.js';
 
 const Sidebar = () => {
     const menus = [
@@ -20,7 +21,7 @@ const Sidebar = () => {
                             menu={menu}                        
                         />
                     </Link>
-                )
+                );
             })}
         </div>
     );
