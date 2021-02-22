@@ -13,6 +13,8 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
+            <p className="Velog">Velog</p>
+           <input type="text" className="input-side"></input>
             {menus.map((menu, index) => {
                 return (
                     <Link to={menu.path} key={index}>

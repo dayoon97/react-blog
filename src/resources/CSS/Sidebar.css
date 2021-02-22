@@ -12,3 +12,12 @@
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
+.Velog{
+    font-size: 40px;
+    font-weight: bold;
+}
+.input-side{
+    border: none;
+    background-color: rgb(224, 224, 224);
+    height: 25px;
+}
