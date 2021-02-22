@@ -1,6 +1,6 @@
-.Contents{
+.dashboard {
     width: 1650px;
     height: 100%;
-    background-color: rgb(233, 233, 233);
+    background-color: rgba(234, 236, 239, 1);
     display: inline-block;
 }

@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Sidebar from './components/Sidebar.js';
-import Contents from './components/Contents.js';
 
 import Home from "./pages/Home.js";
 import Members from "./pages/Members.js";

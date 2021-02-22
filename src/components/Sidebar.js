@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../resources/CSS/Sidebar.css';
 
-import Contents from './Contents.js'
 import SidebarItem from '../pages/SidebarItem.js';
 
 const Sidebar = () => {
