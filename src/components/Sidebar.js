@@ -14,7 +14,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <p className="Velog">Velog</p>
-           <input type="text" className="input-side"></input>
+           <div id="search"><input type="text" className="input-side" placeholder="search"/></div>
             {menus.map((menu, index) => {
                 return (
                     <Link to={menu.path} key={index}>

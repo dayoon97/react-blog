@@ -21,3 +21,15 @@
     background-color: rgb(224, 224, 224);
     height: 25px;
 }
+#search input{
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 30px;
+    padding-left: 40px;
+    width: 70%;
+    height: 30px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 3px;
+}
