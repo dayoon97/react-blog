@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Sidebar from './components/Sidebar.js';
+import Login from './components/Login.js';
 
 import Home from "./pages/Home.js";
 import Members from "./pages/Members.js";
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Sidebar></Sidebar>
+        <Login></Login>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/members" component={Members} />
