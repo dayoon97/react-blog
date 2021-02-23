@@ -5,8 +5,8 @@ import Sidebar from './components/Sidebar.js';
 import Login from './components/Login.js';
 
 import Home from "./pages/Home.js";
-import Members from "./pages/Members.js";
-import Cashes from "./pages/Cashes.js";
+import Post from "./pages/Post.js";
+import Tags from "./pages/Tags.js";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
         <Login></Login>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/members" component={Members} />
-          <Route path="/cashes" component={Cashes} />
+          <Route path="/post" component={Post} />
+          <Route path="/tags" component={Tags} />
         </Switch>
       </BrowserRouter>
     </div>

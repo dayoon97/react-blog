@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Member = () => {
+const Post = () => {
     return (
         <div>Member</div>
     );
 };
 
-export default Member;
+export default Post;

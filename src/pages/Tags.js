@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Cashes = () => {
+const Tags = () => {
     return (
         <div>Cashes</div>
     );
 };
 
-export default Cashes;
+export default Tags;
