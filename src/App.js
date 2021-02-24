@@ -11,16 +11,16 @@ import Tags from "./pages/Tags.js";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Sidebar></Sidebar>
-        <Login></Login>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/post" component={Post} />
-          <Route path="/tags" component={Tags} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+        <BrowserRouter>
+          <Sidebar></Sidebar>
+          <Login></Login>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/post" component={Post} />
+            <Route path="/tags" component={Tags} />
+          </Switch>
+        </BrowserRouter>
+      </div>
   );
 }
 export default App;

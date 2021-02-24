@@ -17,17 +17,17 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
-            <p className="Velog">Velog</p>
-            <div id="search"><input type="text" className="input-side" placeholder="search"/></div>
-            {menus.map((menu, index) => {
-                return (
-                    <Link to={menu.path} key={index}>
-                        <SidebarItem
-                            menu={menu}
-                        />
-                    </Link>
-                );
-            })}
+                <p className="Velog">Velog</p>
+                <div id="search"><input type="text" className="input-side" placeholder="search"/></div>
+                {menus.map((menu, index) => {
+                    return (
+                        <Link to={menu.path} key={index}>
+                            <SidebarItem
+                                menu={menu}
+                            />
+                        </Link>
+                    );
+                })}
         </div>
     );
 }; 

@@ -4,3 +4,10 @@
     margin-left: 45px;
     margin-top: 40px;
 }
+.dashboard {
+    width: 1650px;
+    height: 100%;
+    margin-left: 285px;
+    display: inline-block;
+}
+
