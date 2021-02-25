@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', 'Roboto', 'Oxygen',
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,6 +11,7 @@ body {
   background-color: rgba(234, 236, 239, 1);
   overflow-x: hidden;
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
 ::-webkit-scrollbar {
   width:15px;
