@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../resources/CSS/Content.css';
 import redux from '../resources/images/redux.png';
-import jake from '../resources/images/jake.jpg';
+import jake from '../resources/images/velog_logo.png';
 
 const Content = () => {
     const [board, setBoard] = useState([]);
