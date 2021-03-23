@@ -6,12 +6,13 @@ import jake from '../resources/images/velog_logo.png';
 const Content = () => {
     const [board, setBoard] = useState([]);
     useEffect(() => {
-        fetch('/api/board')
+        fetch('/board')
         .then(response => response.json())
         .then(data => setBoard(data));
     }, []);
     
-    return (
+    console.log(board);
+    return ( 
     <React.Fragment>
        {board.map(b => 
         <div className="content">
