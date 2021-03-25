@@ -2,13 +2,13 @@ import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Sidebar from './components/Sidebar.js';
-import jake from './resources/images/jake.jpg';
 
 import Home from "./pages/Home.js";
 import Post from "./pages/Post.js";
 import Tags from "./pages/Tags.js";
 import NotFound from "./pages/NotFound.js";
 import Profile from './pages/Profile.js';
+import Login from './pages/Login.js';
 
 function App() {
 
@@ -41,6 +41,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/post" component={Post} />
             <Route path="/tags" component={Tags} />
+            <Route path="/login" component={Login} />
           </Switch>
         </BrowserRouter>
       </div>

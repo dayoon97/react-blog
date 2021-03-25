@@ -1,9 +1,5 @@
 import React from "react";
 import '../resources/CSS/menu.css';
-import up from '../resources/images/trending_up.png';
-import tag from '../resources/images/local_offer.png';
-import mood from '../resources/images/mood.png';
-
 
 function SidebarItem({ menu }) {
   return (

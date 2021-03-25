@@ -4,6 +4,7 @@ import '../resources/CSS/Sidebar.css';
 import up from '../resources/images/trending_up.png';
 import tag from '../resources/images/local_offer.png';
 import mood from '../resources/images/mood.png';
+import person from '../resources/images/perm_identity.png';
 
 import SidebarItem from '../pages/SidebarItem.js';
 
@@ -11,8 +12,9 @@ const Sidebar = () => {
 
     const menus = [
         { name : "트렌딩", path : "/", img : up},
-        { name : "최신 포스트", path : "/post", img : mood},
-        { name : "태그 목록", path : "/tags", img : tag}
+        { name : "채팅", path : "/post", img : mood},
+        { name : "태그 목록", path : "/tags", img : tag},
+        { name : "로그인" , path : "/login", img : person}
     ];
 
     return (
