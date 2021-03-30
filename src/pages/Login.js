@@ -2,28 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../resources/CSS/Login.css';
 import axios from 'axios';
 
-
-
-const onLogin = (email, password) => {
-            const data = {
-                email,
-                password,
-            };
-            axios.post('/authenticate', data).then(response => {
-                const { accessToken } = response.data;
-
-                // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
-                axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
-
-                // accessToken을 localStorage, cookie 등에 저장하지 않는다!
-
-            }).catch(error => {
-                // ... 에러 처리
-            });
-        }
-
-        const Login = () => {
-            //객체를 업데이트하기위해 useState안에 객체를 사용
+    const Login = () => {
+        //객체를 업데이트하기위해 useState안에 객체를 사용
         const [inputs, setInputs] = useState({  
             email: '',
             password: '',
@@ -43,8 +23,23 @@ const onLogin = (email, password) => {
             }
         //만든 변수를 seInput으로 변경해준다.
             setInputs(nextInputs)       
-
         }
+
+        const onLogin = () => {
+        axios.post('/authenticate', inputs).then(response => {
+            const { accessToken } = response.data;
+
+            // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
+            axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+
+            // accessToken을 localStorage, cookie 등에 저장하지 않는다!
+
+            }).catch(error => {
+                // ... 에러 처리
+                console.log("에러");
+            })
+        }
+
         //안의 값을 초기화하는 객체를 변수에 넣었다
         const onReset = () => {
             const resetInputs = {       
@@ -54,7 +49,6 @@ const onLogin = (email, password) => {
         //초기화 객체값을 넣은 변수로 변경하도록 셋인풋 실행
             setInputs(resetInputs)      
         }
-
 
     return (
         <div className="cont-area">
@@ -70,7 +64,7 @@ const onLogin = (email, password) => {
                         <input type="password" name="password" placeholder="비밀번호를 입력하세요" onChange={onChange} value={ password }></input>
                     </div>
                     <div className="submit-area">
-                        <button className="login-btn">로그인</button>
+                        <button className="login-btn" onClick={onLogin}>로그인</button>
                     </div>
                 </div>
             </div>
