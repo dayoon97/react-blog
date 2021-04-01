@@ -26,12 +26,15 @@ import axios from 'axios';
         }
 
         const onLogin = () => {
-        axios.post('/authenticate', inputs).then(response => {
-            const { accessToken } = response.data;
+            console.log(inputs);
+        axios.post('http://localhost:3000/authenticate', inputs).then(response => {
+            console.log("response.inputs", response.inputs);
+            const { accessToken } = response.inputs;
 
             // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
             axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
-
+            
+            console.log("성공");
             // accessToken을 localStorage, cookie 등에 저장하지 않는다!
 
             }).catch(error => {
