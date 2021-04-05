@@ -26,20 +26,25 @@ import axios from 'axios';
         }
 
         const onLogin = () => {
-            console.log(inputs);
-        axios.post('http://localhost:3000/authenticate', inputs).then(response => {
-            console.log("response.inputs", response.inputs);
-            const { accessToken } = response.inputs;
+        axios.post('http://localhost:3000/authenticate', inputs)
+            .then(response => {
+            //const { accessToken } = response.inputs;
+            
+            console.log("token : ", response.data.token);
+            console.log("response : ", JSON.parse(response.config.data).email);
+            console.log("request userEmail : ", inputs.email);
+
+            if(JSON.parse(response.config.data).email === inputs.email) { alert("성공"); } 
 
             // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
-            axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+            //axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
             
-            console.log("성공");
             // accessToken을 localStorage, cookie 등에 저장하지 않는다!
 
             }).catch(error => {
                 // ... 에러 처리
-                console.log("에러");
+                console.log("에러", error);
+                alert("이메일과 비밀번호를 확인해주세요!");
             })
         }
 
