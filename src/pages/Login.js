@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, setState } from 'react';
 import '../resources/CSS/Login.css';
 import axios from 'axios';
 
-    const Login = () => {
+
+    const Login = ({ history }) => {
+
         //객체를 업데이트하기위해 useState안에 객체를 사용
         const [inputs, setInputs] = useState({  
             email: '',
@@ -29,12 +31,22 @@ import axios from 'axios';
         axios.post('http://localhost:3000/authenticate', inputs)
             .then(response => {
             //const { accessToken } = response.inputs;
-            
-            console.log("token : ", response.data.token);
-            console.log("response : ", JSON.parse(response.config.data).email);
-            console.log("request userEmail : ", inputs.email);
+            //this.setState({
+            //    email: JSON.parse(response.config.data).email
+                //name: 
+            //});
 
-            if(JSON.parse(response.config.data).email === inputs.email) { alert("성공"); } 
+           
+            if(JSON.parse(response.config.data).email === inputs.email) {
+                history.push('/', true);
+                // <BrowserRouter>
+                //     <Switch>
+                //         <Route path="/myPage" component={myPage} />
+                //     </Switch>
+                // </BrowserRouter>
+                console.log("성공");
+                
+            } 
 
             // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
             //axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
@@ -42,9 +54,8 @@ import axios from 'axios';
             // accessToken을 localStorage, cookie 등에 저장하지 않는다!
 
             }).catch(error => {
-                // ... 에러 처리
-                console.log("에러", error);
-                alert("이메일과 비밀번호를 확인해주세요!");
+                console.log(error);
+                alert("에러");
             })
         }
 

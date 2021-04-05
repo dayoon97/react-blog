@@ -8,13 +8,17 @@ import person from '../resources/images/perm_identity.png';
 
 import SidebarItem from '../pages/SidebarItem.js';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
 
+    let logged = '로그인';
+    let logout = '로그아웃';
+    
     const menus = [
         { name : "트렌딩", path : "/", img : up},
         { name : "채팅", path : "/post", img : mood},
         { name : "태그 목록", path : "/tags", img : tag},
-        { name : "로그인" , path : "/login", img : person}
+        { name : "로그인" , path : "/login", img : person},
+        { name : "마이페이지" , path : "/myPage", img : person}
     ];
 
     return (
